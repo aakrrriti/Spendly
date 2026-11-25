@@ -1,3 +1,4 @@
+
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -12,6 +13,7 @@ import Transactions from "./pages/Transactions.jsx";
 import TransactionDetail from "./pages/TransactionDetail.jsx";
 import Analytics, { Overview, Categories } from "./pages/Analytics.jsx";
 import Budgets from "./pages/Budgets.jsx";
+import BillReminders from "./pages/BillReminders.jsx";
 import Settings from "./pages/Settings.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
@@ -30,12 +32,16 @@ export default function App() {
           <Route index element={<Dashboard />} />
           <Route path="transactions" element={<Transactions />} />
           <Route path="transactions/:id" element={<TransactionDetail />} />
+
           <Route path="analytics" element={<Analytics />}>
             <Route index element={<Navigate to="overview" replace />} />
             <Route path="overview" element={<Overview />} />
             <Route path="categories" element={<Categories />} />
           </Route>
+
           <Route path="budgets" element={<Budgets />} />
+          <Route path="bill-reminders" element={<BillReminders />} />
+
           <Route
             path="rates"
             element={
@@ -44,6 +50,7 @@ export default function App() {
               </Suspense>
             }
           />
+
           <Route path="settings" element={<Settings />} />
         </Route>
       </Route>
