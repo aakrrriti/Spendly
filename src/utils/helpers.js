@@ -11,6 +11,7 @@ export const NAVIGATION = [
   { label: "Transactions", icon: "💸", to: "/transactions" },
   { label: "Analytics", icon: "📊", to: "/analytics" },
   { label: "Budgets", icon: "🎯", to: "/budgets" },
+  { label: "Bill Reminders", icon: "🧾", to: "/bill-reminders" },
   { label: "Rates", icon: "🌍", to: "/rates" },
   { label: "Settings", icon: "⚙️", to: "/settings" },
 ];
